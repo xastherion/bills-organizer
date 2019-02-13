@@ -1,0 +1,27 @@
+from tkinter import *
+
+def escribir():
+    escribir=print('escribir')
+
+master = Tk()
+master.title('Hello')
+master.geometry("500x200")
+
+alto = '30'         # alto para cada boton, entrada o etiqueta
+ancho_1 = '100'     # ancho para etiquetas y botones
+ancho_2 = '300'     # ancho para entradas
+pos_1 = '10'        # x primera posicion, cerca del borde izq
+pos_2 = '140'       # x segunda posicion, despues de las etiquetas
+
+Label(master,  text="Primera").                     place(x=pos_1, y=alto,  width=ancho_1, height=alto)
+Entry(master).                                      place(x=pos_2, y=alto,  width=ancho_2, height=alto)
+
+Button(master, text='escribir', command=escribir).  place(x=pos_2, y=100,   width=ancho_1, height=alto)
+
+master.mainloop()
+
+# label_primera = Label(master,  text="Primera")
+# label_primera.place(x=la01[1], y=la01[2], width=la01[3], height=la01[4])
+#
+# entry_primera = Entry(master, text='', bg=en01[0])
+# entry_primera.place(x=en01[1], y=en01[2], width=en01[3], height=en01[4])
